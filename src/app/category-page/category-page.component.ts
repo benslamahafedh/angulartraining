@@ -15,10 +15,7 @@ export class CategoryPageComponent implements OnInit {
   ngOnInit(): void {
     this.products=this.productService.onGet()
   }
-onDelete(id:number){
-
-
-
+onDelete(id:string){
   this.productService.onDelete(id);
 }
 }

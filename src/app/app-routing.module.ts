@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CheckboxControlValueAccessor } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
-import { AddDirectionComponent } from './add-direction/add-direction.component';
 import { AppComponent } from './app.component';
 import { Carousel04Component } from './carousel04/carousel04.component';
 import { CartPageComponent } from './cart-page/cart-page.component';

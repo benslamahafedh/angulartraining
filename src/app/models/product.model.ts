@@ -1,6 +1,6 @@
 export class Product {
-    public id!: number
+    public id!: string
     public name!: string
-    public price!: number
+    public price!: string
     public image!: string
 }
