@@ -15,6 +15,8 @@ import { CheckoutComponent } from './checkout/checkout.component';
 import { ContactComponent } from './contact/contact.component';
 import { EditComponent } from './pages/product/edit/edit.component';
 import { FormsModule } from '@angular/forms';
+import { FilterPipe } from './filter.pipe';
+import { RadioPipe } from './radio.pipe';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { FormsModule } from '@angular/forms';
     CheckoutComponent,
     ContactComponent,
     EditComponent,
+    FilterPipe,
+    RadioPipe,
   ],
   imports: [
     BrowserModule,

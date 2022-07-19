@@ -12,7 +12,7 @@
 	<!-- Page info end -->
 
 
-	<!-- Category section -->
+	<!-- filter -->
 	<section class="category-section spad">
 		<div class="container">
 			<div class="row">
@@ -20,27 +20,16 @@
 					<div class="filter-widget">
 						<h2 class="fw-title">Categories</h2>
 						<ul class="category-menu">
-							<li><a href="#">Woman wear</a>
-								<ul class="sub-menu">
-									<li><a href="#">Midi Dresses <span>(2)</span></a></li>
-									<li><a href="#">Maxi Dresses<span>(56)</span></a></li>
-									<li><a href="#">Prom Dresses<span>(36)</span></a></li>
-									<li><a href="#">Little Black Dresses <span>(27)</span></a></li>
-									<li><a href="#">Mini Dresses<span>(19)</span></a></li>
-								</ul>
-							</li>
-							<li><a href="#">Man Wear</a>
-								<ul class="sub-menu">
-									<li><a href="#">Midi Dresses <span>(2)</span></a></li>
-									<li><a href="#">Maxi Dresses<span>(56)</span></a></li>
-									<li><a href="#">Prom Dresses<span>(36)</span></a></li>
-								</ul></li>
-							<li><a href="#">Children</a></li>
-							<li><a href="#">Bags & Purses</a></li>
-							<li><a href="#">Eyewear</a></li>
-							<li><a href="#">Footwear</a></li>
 						</ul>
 					</div>
+
+
+
+
+
+
+
+<!-- filter -->
 					<div class="filter-widget mb-0">
 						<h2 class="fw-title">refine by</h2>
 						<div class="price-range-wrap">
@@ -143,9 +132,14 @@
 				</div>
 
 				<div class="col-lg-9  order-1 order-lg-2 mb-5 mb-lg-0">
+					<input type="search"  [(ngModel)]="searchText" placeholder="Search text">
+					<br>
+					<br>
 					<a routerLink="/add">add</a>
 					<div class="row">
-						<div *ngFor="let product of products" class="col-lg-4 col-sm-6">
+						<li><button (click)="onGetGender('men')">men </button></li>
+							<li><button (click)="onGetGender('women')">women</button></li>
+						<div *ngFor="let product of products |filter: searchText" class="col-lg-4 col-sm-6">
 							<div  class="product-item">
 								<div  class="pi-pic">
 									<div class="tag-sale">ON SALE</div>

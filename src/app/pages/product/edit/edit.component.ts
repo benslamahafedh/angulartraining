@@ -24,11 +24,12 @@ export class EditComponent implements OnInit {
       name: form.value.name,
       image: form.value.image,
       price: form.value.price,
+      gender:form.value.gender,
     }
     if (this.header==="Add product"){
       this.productService.onAdd(product);
     }else{
-      this.productService.onEdit(product, form.value.id, form.value.image, form.value.name, form.value.price)
+      this.productService.onEdit(product, form.value.id, form.value.image, form.value.name, form.value.price,form.value.gender)
     }
     this.router.navigateByUrl('');
   }
